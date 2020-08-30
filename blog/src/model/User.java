@@ -1,32 +1,33 @@
 package model;
 
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
 public class User {
 
 	////////// Properties
-	@NotNull(message="Please enter first name.")
+	@NotEmpty(message="Please enter first name.")
 	@Size(min=1, max=100, message="Please enter within min/ max character range.")
 	private String firstName;
 	
-	@NotNull(message="Please enter last name.")
+	@NotEmpty(message="Please enter last name.")
 	@Size(min=1, max=100, message="Please enter within min/ max character range.")
 	private String lastName;
 	
-	@NotNull(message="Please enter user name.")
+	@NotEmpty(message="Please enter user name.")
 	@Size(min=1, max=100, message="Please enter within min/ max character range.")
 	private String userName;
 	
-	@NotNull(message="Please enter password.")
+	@NotEmpty(message="Please enter password.")
 	@Size(min=1, max=100, message="Please enter within min/ max character range.")
 	private String password;
 	
-	@NotNull(message="Please enter email.")
-	@Size(min=1, max=100, message="Please enter within min/ max character range.")
+	@NotEmpty(message="Please enter email.")
+	@Email
 	private String email;
 	
-	@NotNull(message="Please enter phone.")
+	@NotEmpty(message="Please enter phone.")
 	@Size(min=1, max=100, message="Please enter within min/ max character range.")
 	private String phone;
 
