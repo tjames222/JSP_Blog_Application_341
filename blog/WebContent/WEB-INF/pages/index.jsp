@@ -7,6 +7,12 @@
 <a href="about.jsp">
 	<img library="images" name="about.jpg" styleClass="cropped"/>
 </a>
+<a href="register">
+	<h2>Register as New User</h2>
+</a>
+<a href="login">
+	<h2>Login</h2>
+</a>
 <br />
 <div class="regBlock">
 	<div style="display: block">
