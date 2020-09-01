@@ -26,10 +26,10 @@ public class userTable {
 	public void setUser(String user) {
 		User = user;
 	}
-	public string getPassword() {
+	public String getPassword() {
 		return Password;
 	}
-	public void setPassword(string password) {
+	public void setPassword(String password) {
 		Password = password;
 	}
 	
