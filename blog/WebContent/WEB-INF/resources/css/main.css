@@ -1,3 +1,99 @@
-h1{
-	color:red;
+
+/* Navigation Menu styling */
+#nav-pills {
+	width: 500px;
+	display: flex;
 }
+
+#nav-pills input {
+	border: 20px solid grey;
+	padding: 1rem;
+	background-color: transparent;
+}
+
+#nav-pills input:hover {
+	background-color: #808080;
+	-webkit-box-shadow: 9px 3px 16px -8px rgba(0,0,0,0.39);
+	-moz-box-shadow: 9px 3px 16px -8px rgba(0,0,0,0.39);
+	box-shadow: 9px 3px 16px -8px rgba(0,0,0,0.39);
+	color: white;
+}
+
+.navbar{
+	text-align: center;
+	width: 100%;
+}
+
+.navbar ul{
+	list-style-type: none;
+	background-color: #808080;
+	margin: 0;
+	padding: 0;
+}
+
+.navbar li{
+	display: inline;
+}
+
+.navbar li:last-child{
+	float: right;
+}
+
+.navbar li input{
+  	color: white;
+  	text-align: center;
+  	padding: 14px 16px;
+  	background: transparent;
+  	border: none;
+  	text-decoration: none;
+}
+
+.navbar li input:hover{
+	background-color: #808080;
+}
+
+.postList {
+	list-style-type: none;
+	padding: 0;
+}
+
+.menuButton {
+	background-color: #808080;
+        border: none;
+        color: white;
+        padding: 10px 34px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+        margin: 0px 0px;
+        cursor: pointer;
+}
+
+.menuButton:hover {
+	background-color: #ff5353;
+        border: none;
+        color: white;
+        padding: 10px 34px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+        margin: 0px 0px;
+        cursor: pointer;
+}
+/* Navigation Menu styling */
+
+/* Header styling */
+.header {
+	background-color: black;
+}
+
+.headerMenu {
+	background-color: #808080;
+}
+
+.title {
+	color: white;
+}
+/* Header styling */
