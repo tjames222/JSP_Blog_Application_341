@@ -30,6 +30,14 @@
 		</property>
 	</bean>
 	
+	<bean id="regService" class="com.blog.business.RegistrationService">
+ 	</bean>
+ 	
+    <bean id="blogController" class="com.blog.controller.BlogController" >
+		<property name="regService" ref="regService"/>
+	</bean>
+	
+	
    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
       <property name="prefix" value="/WEB-INF/pages/" />
       <property name="suffix" value=".jsp" />

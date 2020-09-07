@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/DDL" xmlns:tns="http://www.example.org/DDL" elementFormDefault="qualified">
+--<ScriptOptions statementTerminator=";"/>
+
+ALTER TABLE `BlogPosts`.`BlogPosts` DROP PRIMARY KEY;
+
+DROP TABLE `BlogPosts`.`BlogPosts`;
+
+CREATE TABLE `BlogPosts`.`BlogPosts` (
+	'id' INT NOT NULL,
+	'postname' VARCHAR(50) NOT NULL,
+	'postbody' VARCHAR(20) NOT NULL,
+	'dateposted' DATE(10) NOT NULL,
+	PRIMARY KEY (`id`)
+) ENGINE=InnoDB;
+</schema>
