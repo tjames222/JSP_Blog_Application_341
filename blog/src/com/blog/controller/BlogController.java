@@ -1,5 +1,6 @@
 package com.blog.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.blog.business.RegistrationService;
 import com.blog.model.User;
 
 import java.util.List;
@@ -18,6 +20,19 @@ import java.util.ArrayList;
 @Controller
 @RequestMapping(path= "/")
 public class BlogController {
+	
+	public RegistrationService regService;
+	
+	
+	@Autowired
+	@RequestMapping(path = "/regService", method = RequestMethod.GET)
+	public void setRegService(RegistrationService  regService) {
+		this.regService = regService;
+	}
+	
+	public RegistrationService getRegService() {
+		return this.regService;
+	}
 	
 	//Directs to index.jsp when going to localhost:8080/blog/index
 	@RequestMapping(path = "/index", method = RequestMethod.GET) 
@@ -53,6 +68,7 @@ public class BlogController {
 		model.addAttribute("firstName", user.getFirstName());
 		model.addAttribute("lastName", user.getLastName());
 		
+		regService.registering(user);
 		//Send to submit() to take user to postFeed
 		return submit(user, model);
 	}
