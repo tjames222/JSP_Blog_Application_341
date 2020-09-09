@@ -2,14 +2,15 @@
 <schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/DDL" xmlns:tns="http://www.example.org/DDL" elementFormDefault="qualified">
 --<ScriptOptions statementTerminator=";"/>
 
-ALTER TABLE `user`.`user` DROP PRIMARY KEY;
+ALTER TABLE `BlogPosts`.`BlogPosts` DROP PRIMARY KEY;
 
-DROP TABLE `user`.`user`;
+DROP TABLE `BlogPosts`.`BlogPosts`;
 
-CREATE TABLE `user`.`user` (
-	`id` INT NOT NULL,
-	`User` VARCHAR(50) NOT NULL,
-	`Password` VARCHAR(20) NOT NULL,
+CREATE TABLE `BlogPosts`.`BlogPosts` (
+	'id' INT NOT NULL,
+	'postname' VARCHAR(50) NOT NULL,
+	'postbody' VARCHAR(20) NOT NULL,
+	'dateposted' DATE(10) NOT NULL,
 	PRIMARY KEY (`id`)
 ) ENGINE=InnoDB;
 </schema>

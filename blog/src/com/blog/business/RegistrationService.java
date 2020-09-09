@@ -1,15 +1,13 @@
 package com.blog.business;
 
-import com.blog.model.User;
-
 import org.springframework.stereotype.Service;
 
-import com.blog.controller.BlogController;
+import com.blog.model.User;
 
 @Service
 public class RegistrationService {
 
-	public void registering(com.blog.model.User user) {
+	public void registering(User user) {
 		System.out.println("Registering user: " + user.toString());
 	}
 }

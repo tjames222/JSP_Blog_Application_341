@@ -34,7 +34,7 @@
  	</bean>
  	
     <bean id="blogController" class="com.blog.controller.BlogController" >
-		<property name="regService" ref="regService"/>
+		<!--<property name="regService" ref="regService"/>-->
 	</bean>
 	
 	

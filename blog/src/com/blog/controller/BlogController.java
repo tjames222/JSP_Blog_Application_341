@@ -13,9 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.blog.business.RegistrationService;
 import com.blog.model.User;
 
-import java.util.List;
 import javax.validation.Valid;
-import java.util.ArrayList;
 
 @Controller
 @RequestMapping(path= "/")

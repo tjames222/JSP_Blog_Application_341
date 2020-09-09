@@ -9,7 +9,7 @@ import java.sql.Connection;
 import com.blog.business.DAO;
 
 
-public class DAOCRUD implements DAO {
+public class DAOPOSTCRUD implements DAO {
 
 	String dbURL = "jdbc:mysql://localhost:3306/sampledb";
 	String username = "root";
@@ -24,53 +24,55 @@ public class DAOCRUD implements DAO {
 	}
 
 	final void Create() throws SQLException {
-		String sql = "INSERT INTO Users (id, user, password) VALUES (?, ?, ?)";
+		String sql = "INSERT INTO BlogPosts (id, postname, body, dateposted) VALUES (?, ?, ?, ?)";
 		PreparedStatement statement = conn.prepareStatement(sql);
 		statement.setString(1, "00001");
-		statement.setString(2, "password");
-		statement.setString(3, "jsmith");
+		statement.setString(2, "firstpost");
+		statement.setString(3, "posttext");
+		statement.setString(4, "04/17/2020");
 		int rowsInserted = statement.executeUpdate();
 		if (rowsInserted > 0) {
-			System.out.println("A new user was inserted successfully!");
+			System.out.println("A new blog post was inserted successfully!");
 		}
 	}
 
 	final void Read() throws SQLException {
-		String sql = "SELECT * FROM Users";
+		String sql = "SELECT * FROM BlogPosts";
 		Statement statement = conn.createStatement();
 		ResultSet result = statement.executeQuery(sql);
 		int count = 0;
 		while (result.next()) {
-			String name = result.getString(2);
-			String id = result.getString(3);
-			String user = result.getString("user");
-			String password = result.getString("password");
-			String output = "User #%d: %s - %s - %s - %s";
-			System.out.println(String.format(output, ++count, name, user, id, password));
+			String id = result.getString(1);
+			String postname = result.getString(3);
+			String body = result.getString("body");
+			String dateposted = result.getString("dateposted");
+			String output = "BlogPosts #%d: %s - %s - %s - %s";
+			System.out.println(String.format(output, ++count, id, postname, body, dateposted));
 		}
 	}
 
 	final void Update() throws SQLException {
-		String sql = "UPDATE Users SET id=?, user=?, password=? WHERE user=?";
+		String sql = "UPDATE BlogPosts SET id=?, postname=?, body=?, dateposted=? WHERE id=?";
 		PreparedStatement statement = conn.prepareStatement(sql);
 		statement.setString(1, "00002");
-		statement.setString(2, "jsmith");
-		statement.setString(3, "Passw@rd");
-		statement.setString(4, "jsmithe");
+		statement.setString(2, "blogpost2");
+		statement.setString(3, "bodytext");
+		statement.setString(4, "05/30/2020");
 		int rowsUpdated = statement.executeUpdate();
 		if (rowsUpdated > 0) {
-			System.out.println("An existing user was updated successfully!");
+			System.out.println("An existing blog post was updated successfully!");
 		}
 	}
 
 	final void Delete() throws SQLException {
-		String sql = "DELETE FROM Users WHERE username=?";
+		String sql = "DELETE FROM BlogPosts WHERE postname=?";
 		PreparedStatement statement = conn.prepareStatement(sql);
-		statement.setString(1, "jsmith");
+		statement.setString(1, "");
 		int rowsDeleted = statement.executeUpdate();
 		if (rowsDeleted > 0) {
-			System.out.println("A user was deleted successfully!");
+			System.out.println("A blog post was deleted successfully!");
 		}
 	}
+
 }
 		
