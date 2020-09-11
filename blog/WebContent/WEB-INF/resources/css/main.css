@@ -1,3 +1,7 @@
+/* Fonts */
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
+/* Fonts */
+
 
 /* Navigation Menu styling */
 #nav-pills {
@@ -65,6 +69,7 @@
         text-align: center;
         text-decoration: none;
         display: inline-block;
+        font-family: 'Open Sans', sans-serif;
         font-size: 15px;
         margin: 0px 0px;
         cursor: pointer;
@@ -94,6 +99,182 @@
 }
 
 .title {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 50px;
 	color: white;
+	margin: 10px 0px 0px;
+}
+
+.subTitle {
+	color: #c7b532; /* yellow */
+	margin: 0px 0px 10px;
 }
 /* Header styling */
+
+/* Body styling */
+.regBlock {
+	display: flex; 
+	justify-content: center; 
+	width: 600px; 
+	overflow: hidden;
+	margin: auto;
+	padding: 10px;
+}
+
+.formWrapper {
+	text-align: center;
+}
+
+.none {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.h2 {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 28px;
+	margin: 30px 0px 1px;
+}
+/* Body styling */
+
+/*Button styling*/
+.button {
+	background-color: #ff5353; /* Light Red */
+	border: none;
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	margin: 0px 20px;
+	padding: 10px 30px;
+	text-align: center;
+	text-decoration: none;
+	transition-duration: 0.4s;
+	width: 100px;
+}
+
+.button:hover {
+	background-color: #808080; /* Grey */
+	color: white;
+	text-decoration: none;
+}
+
+.buttonLong {
+	background-color: #ff5353; /* Light Red */
+	border: none;
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	margin: 0px 0px 10px;
+	padding: 20px 194px;
+	text-align: center;
+	text-decoration: none;
+	transition-duration: 0.4s;
+}
+
+.buttonLong:hover {
+	background-color: #808080; /* Grey */
+	color: white;
+	text-decoration: none;
+}
+
+.featuredButton {
+	background-color: #ff5353; /* Light Red */
+	border: none;
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	margin: 0px 0px 0px 20px;
+	padding: 10px 46px;
+	text-align: center;
+	text-decoration: none;
+	transition-duration: 0.4s;
+}
+
+.featuredButton:hover {
+	background-color: #808080; /* Grey */
+	color: white;
+	text-decoration: none;
+}
+
+.allPostsButton {
+	background-color: #ff5353; /* Light Red */
+	border: none;
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	margin: 0px 0px 0px 20px;
+	padding: 10px 70px;
+	text-align: center;
+	text-decoration: none;
+	transition-duration: 0.4s;
+}
+
+.allPostsButton:hover {
+	background-color: #808080; /* Grey */
+	color: white;
+	text-decoration: none;
+}
+
+.special {
+	background-color: #000000; /* Black */
+	border: none;
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	margin: 8px 0;
+	padding: 10px 40px;
+	text-align: center;
+	transition-duration: 0.4s;
+	width: 600px;
+}
+
+.special:hover {
+	background-color: #ffffff; /* White */
+	color: black;
+}
+
+.large {
+	background-color: #ff5353; /* Light Red */
+	border: none;
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	margin: 300px 0px 300px 0px;
+	padding: 100px 55px 100px 55px;
+	text-align: center;
+	text-decoration: none;
+	transition-duration: 0.4s;	
+}
+
+.large:hover {
+	background-color: #808080; /* Grey */
+	color: white;
+	text-decoration: none;
+}
+
+.delete {
+	background-color: #ff0000; /* Red */
+	border: none;
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	margin: 8px 0;
+	padding: 10px 40px;
+	text-align: center;
+	transition-duration: 0.4s;
+	width: 600px;
+}
+
+.delete:hover {
+	background-color: #ffffff; /* White */
+	color: black;
+}
+/*Button styling*/
+
+/*Image styling*/
+.cropped {
+    width: 525px; /* width of container */
+    height: 200px; /* height of container */
+    object-fit: cover;
+/*Image styling*/
