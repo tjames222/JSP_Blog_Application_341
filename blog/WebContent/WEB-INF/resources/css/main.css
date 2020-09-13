@@ -136,6 +136,30 @@
 	font-size: 28px;
 	margin: 30px 0px 1px;
 }
+
+.formText {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	margin: 30px 0px 1px;
+}
+
+.formInput {
+	background-color: #808080; /* Grey */
+	border: none;
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+	margin: 0px 30px 0px 0px;
+	padding: 10px 55px 10px 8px;
+	text-align: left;
+	transition-duration: 0.4s;
+}
+
+.formInput:hover {
+	background-color: #515151; /* Grey */
+	color: white;
+	text-decoration: none;
+}
 /* Body styling */
 
 /*Button styling*/
@@ -145,15 +169,33 @@
 	color: white;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 18px;
-	margin: 0px 20px;
-	padding: 10px 30px;
+	margin: 25px 0px 0px 0px;
+	padding: 10px 85px;
 	text-align: center;
 	text-decoration: none;
 	transition-duration: 0.4s;
-	width: 100px;
 }
 
 .button:hover {
+	background-color: #808080; /* Grey */
+	color: white;
+	text-decoration: none;
+}
+
+.buttonSpecial {
+	background-color: #000000; /* Black */
+	border: none;
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	margin: 0px 0px 0px 0px;
+	padding: 10px 85px;
+	text-align: center;
+	text-decoration: none;
+	transition-duration: 0.4s;
+}
+
+.buttonSpecial:hover {
 	background-color: #808080; /* Grey */
 	color: white;
 	text-decoration: none;

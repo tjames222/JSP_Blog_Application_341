@@ -1,72 +1,50 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Register</title>
-</head>
-<style>
-      .error {
-         color: #ff0000;
-      }
-
-      .errorblock {
-         color: #000;
-         background-color: #ffEEEE;
-         border: 3px solid #ff0000;
-         padding: 8px;
-         margin: 16px;
-      }
-</style>
-<body>
-<div style="height = 100px; width = 100%">
-<h2 style="align: center">Menu Page</h2>
+<br><br><br>
+<div class="regBlock">
+	<form:form action="registered" method="POST" modelAttribute="user"> 
+		<table>
+			<tr>
+				<td>
+					<form:label path="firstName" class="formText">FIRST NAME </form:label><br>
+					<form:input path="firstName" class="formInput"></form:input>
+					
+				</td>
+				<td>
+					<form:label path="lastName" class="formText">LAST NAME </form:label><br>
+					<form:input path="lastName" class="formInput"></form:input>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<form:label path="userName" class="formText">USERNAME </form:label><br>
+					<form:input path="userName" class="formInput"></form:input>
+					
+				</td>
+				<td>
+					<form:label path="password" class="formText">PASSWORD </form:label><br>
+					<form:input path="password" class="formInput"></form:input>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<form:label path="email" class="formText">EMAIL </form:label><br>
+					<form:input path="email" class="formInput"></form:input>
+					
+				</td>
+				<td>
+					<form:label path="phone" class="formText">PHONE NUMBER </form:label><br>
+					<form:input path="phone" class="formInput"></form:input>
+				</td>
+			</tr>	
+		</table>
+		<input type="submit" value="REGISTER" class="button">
+	</form:form>
 </div>
-<div>
-
+<div class="regBlock">
+	<div style="display: block; text-align: center">
+		<h2 class="formText">OR GO BACK TO</h2><br>
+		<a href="login" class="buttonSpecial">LOGIN</a>
+	</div>
 </div>
-
-<form:form action="registered" method="POST" modelAttribute="user"> 
-	<table>
-		<tr>
-			<td>
-				<form:label path="firstName">First Name: </form:label>
-				<form:input path="firstName"></form:input>
-				
-			</td>
-			<td>
-				<form:label path="lastName">Last Name: </form:label>
-				<form:input path="lastName"></form:input>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<form:label path="userName">Username: </form:label>
-				<form:input path="userName"></form:input>
-				
-			</td>
-			<td>
-				<form:label path="password">Password: </form:label>
-				<form:input path="password"></form:input>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<form:label path="email">Email: </form:label>
-				<form:input path="email"></form:input>
-				
-			</td>
-			<td>
-				<form:label path="phone">Phone Number: </form:label>
-				<form:input path="phone"></form:input>
-			</td>
-		</tr>
-		<tr>
-			<td><input type="submit" value="Submit"></td>
-		</tr>
-	</table>
-</form:form>
-</body>
-</html>
