@@ -88,6 +88,12 @@ public class BlogController {
         return register();
     }
     
+  //Directs to postFeed.jsp when going to localhost:8080/blog/blogPosts
+  	@RequestMapping(path = "/blogPosts", method = RequestMethod.GET) 
+  	public String blogPosts(ModelMap model) {
+  		
+  		return "postFeed";
+  	}
 
 	
 	

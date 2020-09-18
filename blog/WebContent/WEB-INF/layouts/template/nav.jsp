@@ -10,7 +10,7 @@
 	        <a type="button" class="menuButton" href="index">ABOUT</a>
 	      </li>
 	      <li class="nav-item active">
-	      	<a type="button" class="menuButton" href="postFeed">FEED</a>
+	      	<a type="button" class="menuButton" href="blogPosts">FEED</a>
 	      </li>
 	      <li class="nav-item active">
 	      	<a type="button" class="menuButton" href="index">ACCOUNT</a>
