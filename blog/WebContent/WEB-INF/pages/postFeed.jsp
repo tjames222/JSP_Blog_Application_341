@@ -1,11 +1,28 @@
-
-	<h1><b>Posts Feed</b></h1>
-	<h2>All Posts</h2>
-	<h3>Community submissions will be posted here.</h3>
-	<p>Post1:</p>
-	<p>Post2</p>
-	<p>Post3</p>
-	
-	<form method="POST" action="newpost">
-	<input type="submit" name="newpost" value="Create New Post"/>
+<br><br>
+<div class="regBlock">
+	<form action="search" method="POST">
+		<table>
+			<tr>
+				<td>
+					<label for="title" class="formText">SEARCH </label><br>
+					<input name="title" class="formInput"></input>
+					<input type="submit" value="SEARCH" class="button">	
+				</td>
+			</tr>
+		</table>
 	</form>
+	
+</div>
+<div class="regBlock">
+	<a href="login" class="buttonLong">CREATE NEW POST</a>
+</div>
+<br><br>
+
+<div style="background-color: black; color: white; text-align: center">
+	<br><h2 class="h2" >Don't have an account with us?</h2>
+	<div class="regBlock">		
+		<a href="register" class="buttonLong">REGISTER NOW</a>
+	</div>
+</div>
+
+

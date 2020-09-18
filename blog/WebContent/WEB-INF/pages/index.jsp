@@ -20,12 +20,12 @@
 	<div style="display: block; text-align: right">
 		<ul class="none">				
   			<li>
-      			<a href="register" class="featuredButton">FEATURED POST</a>
+      			<a href="blogPosts" class="featuredButton">FEATURED POST</a>
   			</li>
   			<br/>
   			<br/>
   			<li>
-      			<a href="register" class="allPostsButton">ALL POSTS</a>
+      			<a href="blogPosts" class="allPostsButton">ALL POSTS</a>
   			</li>
 		</ul>
 	</div>
