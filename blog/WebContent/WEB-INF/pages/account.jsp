@@ -1,7 +1,17 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+
+
 <br><br><br>
+<div class="regBlock">
+	<br><br>
+	<div class="regBlock">
+		<a href="create" class="buttonLong">CREATE NEW POST</a>
+	</div>
+	<br><br>
+</div>
+
+<hr class="line">
+
+ <!--  This will need to be updated later after we add sessions to allow for data to update correctly for individual users -->
 <div class="regBlock">
 	<form:form action="registered" method="POST" modelAttribute="user"> 
 		<table>
@@ -39,13 +49,9 @@
 				</td>
 			</tr>	
 		</table>
-		<input type="submit" value="REGISTER" class="button">
+		<input type="submit" value="UPDATE" class="button">
 	</form:form>
 </div>
-<div class="regBlock">
-	<div style="display: block; text-align: center">
-		<h2 class="formText">OR GO BACK TO</h2><br>
-		<a href="login" class="buttonSpecial">LOGIN</a>
-	</div>
-</div>
-<br><br>
+
+
+

@@ -11,7 +11,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.blog.business.RegistrationService;
+import com.blog.model.Post;
 import com.blog.model.User;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.validation.Valid;
 
@@ -20,7 +24,6 @@ import javax.validation.Valid;
 public class BlogController {
 	
 	public RegistrationService regService;
-	
 	
 	@Autowired
 	@RequestMapping(path = "/regService", method = RequestMethod.GET)
@@ -66,6 +69,23 @@ public class BlogController {
 		model.addAttribute("firstName", user.getFirstName());
 		model.addAttribute("lastName", user.getLastName());
 		
+		///////////// FOR TESTING ///////////
+		userList.add(user);
+		
+		for (int i = 0; i < userList.size(); i++) {
+			System.out.println(userList.get(i).toString());
+		}
+		
+		for (int i = 0; i < 10; i++) {
+			Post testPost = new Post(Integer.toString(i), "some Content.");	
+			postList.add(testPost);
+		}
+		
+		
+		for (int i = 0; i < postList.size(); i++) {
+			System.out.println(postList.get(i).toString());
+		}
+		
 		regService.registering(user);
 		//Send to submit() to take user to postFeed
 		return submit(user, model);
@@ -88,13 +108,56 @@ public class BlogController {
         return register();
     }
     
-  //Directs to postFeed.jsp when going to localhost:8080/blog/blogPosts
+    //Directs to postFeed.jsp when going to localhost:8080/blog/blogPosts
   	@RequestMapping(path = "/blogPosts", method = RequestMethod.GET) 
   	public String blogPosts(ModelMap model) {
   		
   		return "postFeed";
   	}
+  	
+    //Directs to newPost.jsp when going to localhost:8080/blog/create
+  	@RequestMapping(path = "/create", method = RequestMethod.GET) 
+  	public String create(ModelMap model) {
+  		
+  		return "newPost";
+  	}
+  	
+  	//Directs to account.jsp when going to localhost:8080/blog/myAccount
+  	@RequestMapping(path = "/myAccount", method = RequestMethod.GET) 
+  	public String myAccount(ModelMap model) {
+  		
+  		return "account";
+  	}
+  	
+  	
+  	
+  	
+  	
+  	
+  	//////////////////////////////////////////////////// FOR TESTING PURPOSES //////////////////////////////////////////////
+  	
+  	private List<User> userList = new ArrayList<>();
+	private List<Post> postList = new ArrayList<>();	
+  	
+  	// Temporary User list for testing purposes
+  	@ModelAttribute(name="userlist")
+	public List<User> getUserList() {
+		return userList;
+	}
 
+	public void setUserList(List<User> userList) {
+		this.userList = userList;
+	}
+	
+	// Temporary Post list for Testing purposes
+	@ModelAttribute(name="postlist")
+	public List<Post> getPostList() {
+		return postList;
+	}
+
+	public void setPostList(List<Post> postList) {
+		this.postList = postList;
+	}
 	
 	
 }
