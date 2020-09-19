@@ -160,6 +160,16 @@
 	color: white;
 	text-decoration: none;
 }
+
+.Line { 
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+} 
 /* Body styling */
 
 /*Button styling*/
@@ -259,7 +269,7 @@
 }
 
 .special {
-	background-color: #000000; /* Black */
+	background-color: #808080; /* Grey */
 	border: none;
 	color: white;
 	font-family: 'Open Sans', sans-serif;
@@ -268,12 +278,12 @@
 	padding: 10px 40px;
 	text-align: center;
 	transition-duration: 0.4s;
-	width: 600px;
+	width: 500px;
 }
 
 .special:hover {
-	background-color: #ffffff; /* White */
-	color: black;
+	background-color: #ff5353; /* Light Red */
+	color: white;
 }
 
 .large {

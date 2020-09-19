@@ -13,7 +13,7 @@
 	<div style="display: block; text-align: left; position: relative; top: 30px">
 		<ul class="none">				
    			<li>
-       			<a href="index" class="large">MANAGE ACCOUNT</a>
+       			<a href="myAccount" class="large">MANAGE ACCOUNT</a>
    			</li>
 		</ul>
 	</div>

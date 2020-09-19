@@ -1,3 +1,5 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <br><br>
 <div class="regBlock">
 	<form action="search" method="POST">
@@ -10,13 +12,35 @@
 				</td>
 			</tr>
 		</table>
-	</form>
-	
+	</form>		
 </div>
+
+<hr class="line">
+
 <div class="regBlock">
-	<a href="login" class="buttonLong">CREATE NEW POST</a>
+	<br><br>
+	<div class="regBlock">
+		<a href="create" class="buttonLong">CREATE NEW POST</a>
+	</div>
+	<br><br>
 </div>
-<br><br>
+
+<hr class="line">	
+
+<div class="regBlock">
+	<div style="display: block; text-align: left">
+		<p class="formText">ARTICLES</p>
+	</div>
+</div>
+
+<div class="regBlock">
+	<ul class="none">	
+	<c:forEach items="${postlist}" var="post">				
+			<li><button id="${post.title}" class="special">${post.title}</button><li>			
+	</c:forEach>
+	</ul>	
+</div>
+<br>
 
 <div style="background-color: black; color: white; text-align: center">
 	<br><h2 class="h2" >Don't have an account with us?</h2>

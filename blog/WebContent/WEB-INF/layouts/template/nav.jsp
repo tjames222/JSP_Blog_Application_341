@@ -13,7 +13,7 @@
 	      	<a type="button" class="menuButton" href="blogPosts">FEED</a>
 	      </li>
 	      <li class="nav-item active">
-	      	<a type="button" class="menuButton" href="index">ACCOUNT</a>
+	      	<a type="button" class="menuButton" href="myAccount">ACCOUNT</a>
 	      </li>
 	       <li class="nav-item active">
 	      	<a type="button" class="menuButton" href="login">LOGIN</a>
