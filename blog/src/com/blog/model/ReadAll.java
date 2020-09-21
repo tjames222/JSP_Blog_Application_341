@@ -26,7 +26,7 @@ public class ReadAll {
 				rs = stmt.executeQuery("select * from user.user");
 				
 				while(rs.next()) {
-					System.out.println("id = " + rs.getInt("id") + "user = " = rs.getString("user") + "password = " + rs.getString("password")));
+					System.out.println("id = " + rs.getInt("id") + "user = " + rs.getString("user") + "password = " + rs.getString("password"));
 				}
 				
 		}catch(SQLException e)
@@ -36,11 +36,26 @@ public class ReadAll {
 			e.printStackTrace();
 		}finally
 		{
-			rs.close();
+			try {
+				rs.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 	
-			stmt.close();
+			try {
+				stmt.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 	
-			c.close();
+			try {
+				c.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 	}
 }
