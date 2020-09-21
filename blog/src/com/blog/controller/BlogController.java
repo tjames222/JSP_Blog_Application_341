@@ -1,6 +1,7 @@
 package com.blog.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -19,6 +20,7 @@ import java.util.List;
 
 import javax.validation.Valid;
 
+@Component("blogController")
 @Controller
 @RequestMapping(path= "/")
 public class BlogController {
@@ -35,11 +37,19 @@ public class BlogController {
 		return this.regService;
 	}
 	
+	
+	
 	//Directs to index.jsp when going to localhost:8080/blog/index
 	@RequestMapping(path = "/index", method = RequestMethod.GET) 
 	public String home(ModelMap model) {
 		
 		return "index";
+	}
+	
+	@RequestMapping(path = "/aboutUs", method = RequestMethod.GET) 
+	public String aboutUs(ModelMap model) {
+		
+		return "AboutUs";
 	}
 	
 	//When "Go to registration" link inside index.jsp is clicked call register()

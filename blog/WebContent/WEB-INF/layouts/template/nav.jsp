@@ -7,7 +7,7 @@
 	        <a type="button" class="menuButton" href="index">HOME</a>
 	      </li>
 	      <li class="nav-item active">
-	        <a type="button" class="menuButton" href="index">ABOUT</a>
+	        <a type="button" class="menuButton" href="aboutUs">ABOUT</a>
 	      </li>
 	      <li class="nav-item active">
 	      	<a type="button" class="menuButton" href="blogPosts">FEED</a>
