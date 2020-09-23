@@ -139,6 +139,12 @@ public class BlogController {
   		return "account";
   	}
   	
+    //Directs to account.jsp when going to localhost:8080/blog/about
+  	@RequestMapping(path = "/about", method = RequestMethod.GET) 
+  	public String about(ModelMap model) {
+  		
+  		return "AboutUs";
+  	}
   	
   	
   	
