@@ -1,5 +1,3 @@
-
-
 <br><br><br>
 <div class="regBlock">
 	<br><br>
@@ -13,44 +11,44 @@
 
  <!--  This will need to be updated later after we add sessions to allow for data to update correctly for individual users -->
 <div class="regBlock">
-	<form:form action="registered" method="POST" modelAttribute="user"> 
+	<form method="POST"> 
 		<table>
 			<tr>
 				<td>
-					<form:label path="firstName" class="formText">FIRST NAME </form:label><br>
-					<form:input path="firstName" class="formInput"></form:input>
+					<label for="firstName" class="formText">FIRST NAME </label><br>
+					<input id="firstName" class="formInput"></input>
 					
 				</td>
 				<td>
-					<form:label path="lastName" class="formText">LAST NAME </form:label><br>
-					<form:input path="lastName" class="formInput"></form:input>
+					<label for="lastName" class="formText">LAST NAME </label><br>
+					<input id="lastName" class="formInput"></input>
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<form:label path="userName" class="formText">USERNAME </form:label><br>
-					<form:input path="userName" class="formInput"></form:input>
+					<label for="userName" class="formText">USERNAME </label><br>
+					<input id="userName" class="formInput"></input>
 					
 				</td>
 				<td>
-					<form:label path="password" class="formText">PASSWORD </form:label><br>
-					<form:input type="password" path="password" class="formInput"></form:input>
+					<label for="password" class="formText">PASSWORD </label><br>
+					<input type="password" id="password" class="formInput"></input>
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<form:label path="email" class="formText">EMAIL </form:label><br>
-					<form:input path="email" class="formInput"></form:input>
+					<label for="email" class="formText">EMAIL </label><br>
+					<input id="email" class="formInput"></input>
 					
 				</td>
 				<td>
-					<form:label path="phone" class="formText">PHONE NUMBER </form:label><br>
-					<form:input path="phone" class="formInput"></form:input>
+					<label for="phone" class="formText">PHONE NUMBER </label><br>
+					<input id="phone" class="formInput"></input>
 				</td>
 			</tr>	
 		</table>
 		<input type="submit" value="UPDATE" class="button">
-	</form:form>
+	</form>
 </div>
 
 

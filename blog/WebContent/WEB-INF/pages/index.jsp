@@ -1,8 +1,8 @@
 
 
-<div class="regBlock">
+<div class="leftBlock">
 	<div style="display: block; text-align: left">
-		<h2 class="h2">ABOUT US</h2>
+		<p class="formText">ABOUT US</p>
 	</div>
 </div>
 <div class="regBlock">
@@ -20,8 +20,8 @@
 		<ul class="none">
 			<li><a href="blogPosts" class="featuredButton">FEATURED POST</a>
 			</li>
-			<br />
-			<br />
+			<br/>
+			<br/>
 			<li><a href="blogPosts" class="allPostsButton">ALL POSTS</a></li>
 		</ul>
 	</div>
