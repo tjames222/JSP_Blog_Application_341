@@ -146,6 +146,13 @@ public class BlogController {
   		return "AboutUs";
   	}
   	
+  	@RequestMapping(path = "/submitPost", params = "savepost", method = RequestMethod.POST)
+    public String submitPost(@Valid @ModelAttribute("post") Post post, Model model) {
+  		postList.add(post);
+        model.addAttribute("title", post.getTitle());
+        model.addAttribute("content", post.getContent());
+        return "postFeed";
+    } 
   	
   	
   	
@@ -153,7 +160,7 @@ public class BlogController {
   	//////////////////////////////////////////////////// FOR TESTING PURPOSES //////////////////////////////////////////////
   	
   	private List<User> userList = new ArrayList<>();
-	private List<Post> postList = new ArrayList<>();	
+	private List<Post> postList = new ArrayList<>();
   	
   	// Temporary User list for testing purposes
   	@ModelAttribute(name="userlist")
