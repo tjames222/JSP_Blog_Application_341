@@ -17,11 +17,13 @@ public class Sessions
 		 if (session != null) 
 			 {
 		      return;
+		      System.out.println("Fail");
 			 } 
 		 else 
 			 {
 		 	  session.setAttribute("username", "Users");
 	    	  session.setMaxInactiveInterval(300);
+	    	  System.out.println("Success" + session.getAttribute("username"));
 			 }
 	    	
 		}

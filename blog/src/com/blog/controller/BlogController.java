@@ -105,6 +105,17 @@ public class BlogController {
 	//Submit takes user to postFeed.jsp
 	@RequestMapping(path = "/postFeed", params = "submit", method = RequestMethod.POST)
     public String submit(@Valid @ModelAttribute("user") User user, Model model) {
+		
+		// Check to see if a user is in the userList and if the password matches 
+		// If match add welcome message
+		// If fail have user try again with message
+		if (userList.toString().contains(user.getUserName())) {
+			System.out.println("Success");
+		}
+		else {
+			System.out.println("Fail!");
+		}
+		
         model.addAttribute("username", user.getUserName());
         model.addAttribute("password", user.getPassword());
         return "postFeed";
@@ -148,9 +159,17 @@ public class BlogController {
   	
   	@RequestMapping(path = "/submitPost", params = "savepost", method = RequestMethod.POST)
     public String submitPost(@Valid @ModelAttribute("post") Post post, Model model) {
+  		post.setTitle(post.getTitle().toUpperCase());
   		postList.add(post);
-        model.addAttribute("title", post.getTitle());
+        model.addAttribute("title", post.getTitle().toUpperCase());
         model.addAttribute("content", post.getContent());
+        
+        ///////////// FOR TESTING ///////////
+        int index = postList.lastIndexOf(post);
+        
+        System.out.println(postList.lastIndexOf(post));
+        System.out.println(postList.get(index).toString());      
+        
         return "postFeed";
     } 
   	
