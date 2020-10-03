@@ -36,7 +36,7 @@
 <div class="regBlock">
 	<ul class="none">	
 	<c:forEach items="${postlist}" var="post">				
-			<li><button id="${post.title}" class="special">${post.title}</button><li>			
+			<li><a href="view" id="${post.title}" class="special">${post.title}</a><li><br><br>		
 	</c:forEach>
 	</ul>	
 </div>

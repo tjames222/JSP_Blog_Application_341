@@ -322,9 +322,10 @@
 	color: white;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 18px;
-	margin: 8px 0;
-	padding: 10px 40px;
+	margin: 0px 0px 0px 20px;
+	padding: 10px 70px;
 	text-align: center;
+	text-decoration: none;
 	transition-duration: 0.4s;
 	width: 500px;
 }

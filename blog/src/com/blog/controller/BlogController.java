@@ -173,7 +173,14 @@ public class BlogController {
         return "postFeed";
     } 
   	
-  	
+  	//Directs to newPost.jsp when going to localhost:8080/blog/view
+  	@RequestMapping(path = "/view", method = RequestMethod.GET) 
+  	public String view(ModelMap model, Post post) {
+  		model.addAttribute("title", post.getTitle().toUpperCase());
+        model.addAttribute("content", post.getContent());
+  		 		
+  		return "viewPost";
+  	}
   	
   	
   	//////////////////////////////////////////////////// FOR TESTING PURPOSES //////////////////////////////////////////////
