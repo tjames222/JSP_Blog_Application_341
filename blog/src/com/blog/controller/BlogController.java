@@ -86,10 +86,10 @@ public class BlogController {
 			System.out.println(userList.get(i).toString());
 		}
 		
-		for (int i = 0; i < 10; i++) {
-			Post testPost = new Post(Integer.toString(i), "some Content.");	
-			postList.add(testPost);
-		}
+		Post post1 = new Post("Test Post 1", "Test post content.");
+		postList.add(post1);
+		Post post2 = new Post("Test Post 2", "Test post content.");
+		postList.add(post2);
 		
 		
 		for (int i = 0; i < postList.size(); i++) {
