@@ -10,13 +10,13 @@
 
 <div class="leftBlock">
 	<div style="display: block; text-align: left">
-		<h2 class="h2">${post.title}</h2>
+			<h2 class="h2">${title}</h2>
 	</div>
 </div>
 <br/>
 
 <div class="leftBlock">
 	<div style="display: block; text-align: left">
-		<p>${post.content}</p>
+		<p>${content}</p>
 	</div>
 </div>

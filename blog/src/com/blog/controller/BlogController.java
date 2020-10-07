@@ -182,6 +182,17 @@ public class BlogController {
   		return "viewPost";
   	}
   	
+  	@RequestMapping(path = "/viewPost", params = "postTitle", method = RequestMethod.POST)
+    public String viewPost(@Valid @ModelAttribute("post") Post post, Model model) {
+        model.addAttribute("title", post.getTitle().toUpperCase());
+        model.addAttribute("content", post.getContent());
+        
+        ///////////// FOR TESTING ///////////
+        System.out.println(post.getTitle().toString());    
+        
+        return "viewPost";
+    } 
+  	
   	
   	//////////////////////////////////////////////////// FOR TESTING PURPOSES //////////////////////////////////////////////
   	

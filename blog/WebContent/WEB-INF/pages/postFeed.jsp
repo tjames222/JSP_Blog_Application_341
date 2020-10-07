@@ -34,12 +34,17 @@
 </div>
 
 <div class="regBlock">
-	<ul class="none">	
-	<c:forEach items="${postlist}" var="post">				
-			<li><a href="view" id="${post.title}" class="special">${post.title}</a></li><br>
-			<li><p>${post.content}</p></li><br>
-	</c:forEach>
-	</ul>	
+	<form method="POST" action="viewPost">
+		<ul class="none">	
+			<c:forEach items="${postlist}" var="post">	
+				<li>
+					<input type="hidden" name="title" value="${post.title}"/>	
+					<input type="hidden" name="content" value="${post.content}"/>			
+					<input type="submit" name="postTitle" class="special" value="${post.title}"/>
+				</li><br><br>				
+			</c:forEach>
+		</ul>	
+	</form>
 </div>
 <br>
 
